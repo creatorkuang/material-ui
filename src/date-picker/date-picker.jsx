@@ -47,6 +47,7 @@ const DatePicker = React.createClass({
     showYearSelector: React.PropTypes.bool,
     style: React.PropTypes.object,
     textFieldStyle: React.PropTypes.object,
+    dialogRootStyle:React.PropTypes.object
   },
 
   windowListeners: {
@@ -125,6 +126,7 @@ const DatePicker = React.createClass({
           minDate={minDate}
           maxDate={maxDate}
           autoOk={autoOk}
+          dialogRootStyle={this.props.dialogRootStyle}
           showYearSelector={showYearSelector}
           shouldDisableDate={this.props.shouldDisableDate}
           hideToolbarYearChange={this.props.hideToolbarYearChange} />

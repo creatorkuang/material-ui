@@ -52,6 +52,7 @@ const DatePickerDialog = React.createClass({
     onShow: React.PropTypes.func,
     shouldDisableDate: React.PropTypes.func,
     showYearSelector: React.PropTypes.bool,
+    dialogRootStyle:React.PropTypes.object
   },
 
   //for passing default theme context to children
@@ -127,6 +128,11 @@ const DatePickerDialog = React.createClass({
         marginRight: 8,
       },
     };
+
+    // update dialog root style
+    if(this.props.dialogRootStyle){
+      styles.root=_.extend({},styles.root,this.props.dialogRootStyle);
+    }
 
     let actions = [
       <FlatButton
